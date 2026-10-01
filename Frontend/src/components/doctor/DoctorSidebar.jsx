@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useDoctor } from '../../context/DoctorContext';
 
@@ -32,7 +32,7 @@ export default function DoctorSidebar() {
       <aside className={`sidebar ${isMobileNavOpen ? 'mobile-open' : ''}`} id="sidebar" aria-label="Main Navigation">
         {/* Brand / Logo Header */}
         <div className="brand-container">
-          <div className="brand-logo-wrap">
+          <Link to="/doctor/dashboard" className="brand-logo-wrap" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="medical-cross-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="12" y1="5" x2="12" y2="19" />
@@ -40,10 +40,10 @@ export default function DoctorSidebar() {
               </svg>
             </div>
             <div className="brand-text-group">
-              <span className="brand-name">MediCare</span>
+              <span className="brand-name">Aarogya Sangam</span>
               <span className="brand-subtitle">Doctor Portal</span>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Navigation List */}

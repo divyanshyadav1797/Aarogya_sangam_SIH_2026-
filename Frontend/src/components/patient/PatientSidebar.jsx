@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { usePatient } from '../../context/PatientContext';
 
@@ -22,15 +22,15 @@ export default function PatientSidebar() {
   return (
     <aside className={`sidebar ${isMobileMenuOpen ? 'open' : ''}`} id="sidebar">
       {/* Brand Logo */}
-      <div className="logo">
+      <Link to="/patient/dashboard" className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>
         <div className="logo-icon">
           <i className="fa-solid fa-heart-pulse"></i>
         </div>
         <div>
-          <h2>MediCare</h2>
+          <h2>Aarogya Sangam</h2>
           <span>Better Health, Brighter Lives.</span>
         </div>
-      </div>
+      </Link>
 
       {/* Navigation Links */}
       <nav className="navigation">

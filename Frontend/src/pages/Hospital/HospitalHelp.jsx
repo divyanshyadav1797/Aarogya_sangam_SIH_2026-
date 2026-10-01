@@ -5,12 +5,12 @@ const faqs = [
   { q: 'How do I manage OT schedules?', a: 'Navigate to Operations / OT. You can view, create, and update operation schedules by surgeon, room, and time slot.' },
   { q: 'How is bed availability updated?', a: 'Bed data is updated in real-time from the Patients module whenever a patient is admitted or discharged. The Dashboard reflects this immediately.' },
   { q: 'How can I generate monthly reports?', a: 'Visit the Reports section. Select the report type and period, then click Download to generate a PDF or CSV report.' },
-  { q: 'Who do I contact for technical support?', a: 'Contact the MediCare IT Helpdesk at itsupport@medicare.gov.in or call 1800-XXX-XXXX (toll-free, 24x7).' },
+  { q: 'Who do I contact for technical support?', a: 'Contact the Aarogya Sangam IT Helpdesk at itsupport@aarogyasangam.gov.in or call 1800-XXX-XXXX (toll-free, 24x7).' },
 ];
 
 const contacts = [
   { label: 'Technical Helpdesk', value: '1800-XXX-XXXX', icon: '📞' },
-  { label: 'Email Support', value: 'itsupport@medicare.gov.in', icon: '✉️' },
+  { label: 'Email Support', value: 'itsupport@aarogyasangam.gov.in', icon: '✉️' },
   { label: 'Ministry of Health (MoHFW)', value: 'helpdesk@mohfw.gov.in', icon: '🏛️' },
 ];
 

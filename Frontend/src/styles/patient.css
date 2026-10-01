@@ -155,7 +155,9 @@ body {
 
     color: var(--primary);
 
-    font-size: 23px;
+    font-size: 19px;
+
+    white-space: nowrap;
 
 }
 
@@ -2990,7 +2992,9 @@ footer a {
 
         font-weight: 800;
 
-        font-size: 18px;
+        font-size: 15px;
+
+        white-space: nowrap;
 
     }
 

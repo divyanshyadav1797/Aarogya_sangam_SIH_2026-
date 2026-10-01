@@ -227,11 +227,12 @@ input:focus-visible {
 }
 
 .brand-name {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-dark);
   letter-spacing: -0.02em;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .brand-subtitle {

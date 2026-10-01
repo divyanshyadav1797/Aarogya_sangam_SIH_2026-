@@ -252,3 +252,67 @@ Border:
 
 
 -- in kisok interface make it with large and bold text with large fonts with user friendly interface so the workflow be smooth and all the thing work fine and make the kiosk interface totally minimal with only the  important stuff in the user front
+
+
+
+
+
+
+
+
+
+patient_case_taking_SIH_2026-/
+├── Backend/                            # Core API Server (Node.js + Express)
+│   ├── config/                         # Database and JWT configurations
+│   ├── models/                         # Legacy/Root Mongoose schemas
+│   ├── src/
+│   │   ├── config/                     # DB connection & token configurations
+│   │   ├── controllers/                # authController.js, clinicalController.js
+│   │   ├── middleware/                 # authMiddleware, securityMiddleware, errorHandler
+│   │   ├── models/                     # User, ClinicalReport, MedicalRecord, Appointment
+│   │   ├── repositories/               # Data access layer (user, clinical, token)
+│   │   ├── routes/                     # authRoutes.js, clinicalRoutes.js
+│   │   ├── services/                   # aiIntakeService, voiceIntakeService, ocrService
+│   │   └── utils/                      # responseFormatter.js
+│   ├── server.js                       # Primary backend bootstrap & SPA server
+│   ├── test-runner.js                  # Automated test runner
+│   └── test-voice-intake.js            # Voice intake verification script
+│
+├── ai-service/                         # Dedicated AI Microservice (Gemini)
+│   ├── src/
+│   │   ├── ai/
+│   │   │   ├── geminiClient.js         # Google GenAI SDK instance
+│   │   │   ├── intakeAgent.js          # Next question generator
+│   │   │   ├── reportAgent.js          # Clinical report synthesizer
+│   │   │   ├── voiceTranscriptionAgent.js # Push-to-talk audio transcriber
+│   │   │   └── schemas/                # Zod schemas for structured AI outputs
+│   │   ├── controllers/                # voiceController.js, ocrController.js
+│   │   ├── intake/                     # sessionStore.js (in-memory intake sessions)
+│   │   ├── ocr/                        # ocrAgent.js, ocrPrompt.js, ocrSchema.js
+│   │   ├── routes/                     # intake.routes.js, voice.routes.js, ocr.routes.js
+│   │   └── server.js                   # AI Microservice entrypoint (Port 4100)
+│   └── package.json
+│
+├── Frontend/                           # User Interface (React 18 + Vite SPA)
+│   ├── src/
+│   │   ├── components/                 # Reusable components & PushToTalkButton
+│   │   │   ├── patient/                # PatientLayout, PatientSidebar, PatientTopbar
+│   │   │   ├── doctor/                 # DoctorLayout and clinical components
+│   │   │   ├── hospital/               # HospitalLayout and operations components
+│   │   │   └── Voice/                  # PushToTalkButton.jsx audio recorder
+│   │   ├── context/                    # AuthContext, DoctorContext, PatientContext
+│   │   ├── pages/
+│   │   │   ├── Patient/                # Dashboard, Records, Appointments, Doctors, Schemes
+│   │   │   ├── Doctor/                 # PatientsPage, Prescriptions, Appointments, Settings
+│   │   │   ├── Hospital/               # Dashboard, Doctors, Staff, OPD, Reports
+│   │   │   ├── Kiosk/                  # KioskPage.jsx (Full touch-screen walk-in terminal)
+│   │   │   └── Login/                  # Multi-portal Login & Registration
+│   │   ├── routes/                     # ProtectedRoute.jsx (RBAC enforcement)
+│   │   ├── services/                   # api.js, authService.js
+│   │   └── App.jsx                     # Route definitions & global ErrorBoundary
+│   ├── vite.config.js
+│   └── package.json
+│
+├── docker-compose.yml                  # Full stack multi-container specification
+├── render.yaml                         # 1-click cloud deployment specification
+└── package.json                        # Monorepo root scripts (install:all, dev, build)

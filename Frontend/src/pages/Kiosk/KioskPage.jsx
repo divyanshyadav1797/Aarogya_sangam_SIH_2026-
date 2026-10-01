@@ -870,7 +870,7 @@ export default function KioskPage() {
                 ← {L.back}
               </button>
               <div className="ai-header-badge">
-                <span>🤖</span> Quantum Care AI Clinical Intake
+                <span>🤖</span> Aarogya Sangam AI Clinical Intake
               </div>
               <div className="ai-step-indicator">
                 Question {questionNumber} of 4 · Step-by-Step Clinical Case-Taking
@@ -880,7 +880,7 @@ export default function KioskPage() {
                 <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>✦</div>
                   <h3 style={{ fontSize: '1.4rem', color: '#0F172A', marginBottom: '0.5rem' }}>
-                    Analyzing with Quantum Care AI...
+                    Analyzing with Aarogya Sangam AI...
                   </h3>
                   <p style={{ color: '#64748B', fontSize: '1rem' }}>
                     Evaluating clinical symptoms and formulating tailored question.

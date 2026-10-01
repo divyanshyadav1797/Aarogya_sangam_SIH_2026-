@@ -421,7 +421,7 @@ export default function PatientProfile() {
               <div style={{ marginTop: '1rem', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: '10px', padding: '0.85rem', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                 <i className="fa-solid fa-shield-halved" style={{ color: '#2563EB', fontSize: '1.1rem', marginTop: '2px' }}></i>
                 <div style={{ fontSize: '0.8rem', color: '#1E40AF', lineHeight: 1.45 }}>
-                  <strong>Digital Health Card Benefits:</strong> Present this QR pass at any Quantum Care Hospital Kiosk or Partner Hospital for zero-wait registration, instant consent-driven medical timeline sharing, and biometric validation.
+                  <strong>Digital Health Card Benefits:</strong> Present this QR pass at any Aarogya Sangam Hospital Kiosk or Partner Hospital for zero-wait registration, instant consent-driven medical timeline sharing, and biometric validation.
                 </div>
               </div>
 

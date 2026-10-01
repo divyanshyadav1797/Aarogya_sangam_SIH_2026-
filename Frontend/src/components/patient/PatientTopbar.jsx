@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { usePatient } from '../../context/PatientContext';
 import ThemeToggle from '../ThemeToggle';
@@ -37,10 +37,10 @@ export default function PatientTopbar() {
         <i className="fa-solid fa-bars"></i>
       </button>
 
-      <div className="mobile-logo">
+      <Link to="/patient/dashboard" className="mobile-logo" style={{ textDecoration: 'none', color: 'inherit' }}>
         <i className="fa-solid fa-heart-pulse"></i>
-        MediCare
-      </div>
+        Aarogya Sangam
+      </Link>
 
       <div className="search-box">
         <i className="fa-solid fa-magnifying-glass"></i>

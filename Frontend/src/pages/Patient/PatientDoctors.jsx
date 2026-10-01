@@ -741,7 +741,7 @@ export default function PatientDoctors() {
                   <div style={{ textAlign: 'center', padding: '3.5rem 1rem' }}>
                     <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>✦</div>
                     <h3 style={{ fontSize: '1.2rem', color: '#0F172A', margin: '0 0 6px 0' }}>
-                      Quantum Care AI is reasoning...
+                      Aarogya Sangam AI is reasoning...
                     </h3>
                     <p style={{ color: '#64748B', fontSize: '0.9rem' }}>
                       Evaluating symptom presentation and preparing targeted clinical inquiry.

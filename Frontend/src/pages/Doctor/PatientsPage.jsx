@@ -1736,7 +1736,7 @@ Impression: ${selectedPatient.diagnosticImpression || 'Clinical evaluation in pr
                     </div>
                     <div>
                       <h2 style={{ margin: 0, fontSize: '1.35rem', fontWeight: 800, letterSpacing: '-0.02em', color: '#0F172A' }}>
-                        QUANTUM CARE MEMORIAL HOSPITAL
+                        AAROGYA SANGAM MEMORIAL HOSPITAL
                       </h2>
                       <p style={{ margin: '2px 0 0', fontSize: '0.78rem', color: '#475569', fontWeight: 500 }}>
                         Autonomous Multi-Specialty Tertiary Healthcare & Research Centre
@@ -1884,7 +1884,7 @@ Impression: ${selectedPatient.diagnosticImpression || 'Clinical evaluation in pr
                   </div>
                 )}
                 <div style={{ marginTop: '8px', fontSize: '0.72rem', color: '#64748B' }}>
-                  * Please present this slip at the Quantum Care Radiology / Pathology Wing or any NABL-accredited diagnostic laboratory.
+                  * Please present this slip at the Aarogya Sangam Radiology / Pathology Wing or any NABL-accredited diagnostic laboratory.
                 </div>
               </div>
 
@@ -1904,7 +1904,7 @@ Impression: ${selectedPatient.diagnosticImpression || 'Clinical evaluation in pr
               {/* Footer Notice & Signatures */}
               <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: '2rem' }}>
                 <div style={{ maxWidth: '420px', fontSize: '0.7rem', color: '#64748B', lineHeight: 1.4 }}>
-                  <strong>Important Notice for Patient:</strong> This physical consultation slip contains your official medical assessment and scan requests. Keep this document safe and upload a scan/photo of it via the Quantum Care webapp or Kiosk prior to your next follow-up appointment for automated AI case updating.
+                  <strong>Important Notice for Patient:</strong> This physical consultation slip contains your official medical assessment and scan requests. Keep this document safe and upload a scan/photo of it via the Aarogya Sangam webapp or Kiosk prior to your next follow-up appointment for automated AI case updating.
                 </div>
 
                 <div style={{ textAlign: 'center', width: '200px' }}>

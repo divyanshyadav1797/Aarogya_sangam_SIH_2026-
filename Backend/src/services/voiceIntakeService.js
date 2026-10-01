@@ -5,27 +5,50 @@ class VoiceIntakeService {
         originalName,
         languageHint
     }) {
+        if (!buffer || !buffer.length) {
+            throw new Error(
+                'Backend received an empty audio buffer.'
+            );
+        }
+
         const aiServiceUrl =
             process.env.AI_SERVICE_URL ||
             'http://127.0.0.1:4100';
 
         const formData = new FormData();
 
-        const cleanMimeType = (mimeType || 'audio/webm').split(';')[0].trim().toLowerCase();
+        const audioBuffer = Buffer.from(buffer);
+
+        const audioBlob = new Blob(
+            [audioBuffer],
+            {
+                type: mimeType || 'audio/webm'
+            }
+        );
 
         formData.append(
             'audio',
-            new Blob([buffer], {
-                type: cleanMimeType
-            }),
+            audioBlob,
             originalName || 'answer.webm'
         );
 
         if (languageHint) {
-            formData.append('language', languageHint);
+            formData.append(
+                'language',
+                languageHint
+            );
         }
 
-        const controller = new AbortController();
+        console.log("FORWARDING AUDIO TO AI SERVICE:");
+        console.log({
+            size: audioBuffer.length,
+            mimeType: mimeType,
+            originalName: originalName,
+            language: languageHint
+        });
+
+        const controller =
+            new AbortController();
 
         const timeout = setTimeout(() => {
             controller.abort();
@@ -48,15 +71,23 @@ class VoiceIntakeService {
                 }
             );
 
-            if (!response.ok) {
-                const errorText = await response.text();
+            const responseText =
+                await response.text();
 
+            console.log(
+                "AI SERVICE RESPONSE:",
+                response.status,
+                responseText
+            );
+
+            if (!response.ok) {
                 throw new Error(
-                    `Voice AI service failed: ${errorText}`
+                    `Voice AI service failed: ${responseText}`
                 );
             }
 
-            return await response.json();
+            return JSON.parse(responseText);
+
         } finally {
             clearTimeout(timeout);
         }

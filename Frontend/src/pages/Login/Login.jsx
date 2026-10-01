@@ -315,7 +315,7 @@ export default function Login() {
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-secondary text-primary text-2xl mb-3 shadow-sm border border-secondaryDark">
             <i className="fa-solid fa-heart-pulse text-primary"></i>
           </div>
-          <h1 className="text-3xl font-bold text-maintext tracking-tight mb-1">MediCare</h1>
+          <h1 className="text-3xl font-bold text-maintext tracking-tight mb-1">Aarogya Sangam</h1>
           <p className="text-sectext text-sm font-medium">Unified Healthcare & Clinical Practice Portal</p>
         </div>
 

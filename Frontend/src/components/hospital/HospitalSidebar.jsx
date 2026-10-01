@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useHospital } from '../../context/HospitalContext';
 
@@ -31,7 +31,7 @@ export default function HospitalSidebar() {
       <aside className={`sidebar ${isMobileNavOpen ? 'mobile-open' : ''}`} id="sidebar" aria-label="Hospital Navigation">
         {/* Brand Header */}
         <div className="brand-container">
-          <div className="brand-logo-wrap">
+          <Link to="/hospital/dashboard" className="brand-logo-wrap" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="medical-cross-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -39,10 +39,10 @@ export default function HospitalSidebar() {
               </svg>
             </div>
             <div className="brand-text-group">
-              <span className="brand-name">MediCare</span>
+              <span className="brand-name">Aarogya Sangam</span>
               <span className="brand-subtitle">Hospital Portal</span>
             </div>
-          </div>
+          </Link>
           <button className="mobile-close-btn" id="mobileCloseBtn" aria-label="Close Navigation" onClick={closeSidebar}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>

@@ -26,7 +26,7 @@ export default function PatientSupport() {
           <button type="button">Start Chat</button>
         </div>
 
-        <div className="support-card" onClick={() => showToast('Opened MediCare Knowledge Base and Scheme FAQs.')}>
+        <div className="support-card" onClick={() => showToast('Opened Aarogya Sangam Knowledge Base and Scheme FAQs.')}>
           <i className="fa-solid fa-circle-question"></i>
           <h3>FAQs</h3>
           <p>Find answers to common questions about appointments & schemes.</p>

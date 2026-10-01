@@ -185,11 +185,12 @@ table {
 }
 
 .brand-name {
-  font-size: 1.18rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-dark);
   letter-spacing: -0.02em;
   line-height: 1.15;
+  white-space: nowrap;
 }
 
 .brand-subtitle {

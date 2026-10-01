@@ -92,7 +92,7 @@ export default function HospitalDoctors() {
 
   const copyCreds = () => {
     if (!createdCredentials) return;
-    const text = `Quantum Care Doctor Login Credentials:\nIdentifier: ${createdCredentials.identifier}\nPassword: ${createdCredentials.temporaryPassword}\nPIN: ${createdCredentials.pin}\nHospital: ${hospitalName}`;
+    const text = `Aarogya Sangam Doctor Login Credentials:\nIdentifier: ${createdCredentials.identifier}\nPassword: ${createdCredentials.temporaryPassword}\nPIN: ${createdCredentials.pin}\nHospital: ${hospitalName}`;
     navigator.clipboard.writeText(text);
     alert('Credentials copied to clipboard! Share these with the doctor to log in.');
   };
